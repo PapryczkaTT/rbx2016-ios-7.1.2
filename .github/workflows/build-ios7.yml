@@ -1,0 +1,29 @@
+name: Build Roblox 2016 for iOS 7.1.2 (ARMv7)
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-13 # Starszy runner macOS z obsługą Intel/Rosetta
+
+    steps:
+      - name: Pobierz kod z repozytorium
+        uses: actions/checkout@v4
+
+      - name: Zainstaluj Theos oraz stare SDK (iOS 7.1)
+        run: |
+          git clone --recursive https://github.com/theos/theos.git ~/theos
+          git clone https://github.com/theos/sdks.git ~/theos/sdks
+          # W repozytorium theos/sdks znajduje się iPhoneOS7.1.sdk!
+
+      - name: Kompilacja pod ARMv7 (bez podpisywania)
+        run: |
+          export THEOS=~/theos
+          # Przykład dla projektu Theos / Makefile:
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless ARCHS=armv7 TARGET=iphone:clang:7.1:7.1 CODESIGN_IPA=0
+
+      - name: Zapisz gotowy plik IPA jako artefakt
+        uses: actions/upload-artifact@v4
+        with:
+          name: Roblox2016-iOS7-unsigned
+          path: packages/*.ipa
