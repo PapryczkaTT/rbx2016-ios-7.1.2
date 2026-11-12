@@ -5241,11 +5241,19 @@
 		10C6AA45160BD71F00856016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -5259,7 +5267,6 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -5269,24 +5276,30 @@
 					../App.BulletPhysics,
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				SEPARATE_STRIP = YES;
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
 		10C6AA46160BD71F00856016 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -5294,7 +5307,6 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -5304,7 +5316,6 @@
 					../App.BulletPhysics,
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -5312,19 +5323,25 @@
 				SEPARATE_STRIP = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
 		939A49801AB109FF0053CB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -5348,7 +5365,6 @@
 					NATIVE_IOS,
 					RBX_INTERNAL,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -5370,7 +5386,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "RobloxUI/RobloxInternal-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/iOS,
@@ -5389,7 +5404,6 @@
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -5397,12 +5411,19 @@
 		939A49811AB109FF0053CB03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
@@ -5426,7 +5447,6 @@
 					NATIVE_IOS,
 					RBX_INTERNAL,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -5448,7 +5468,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "RobloxUI/RobloxInternal-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/iOS,
@@ -5467,7 +5486,6 @@
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -5475,12 +5493,19 @@
 		939A49821AB109FF0053CB03 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
@@ -5504,7 +5529,6 @@
 					NATIVE_IOS,
 					RBX_INTERNAL,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -5526,7 +5550,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "RobloxUI/RobloxInternal-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/iOS,
@@ -5545,7 +5568,6 @@
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -5553,12 +5575,20 @@
 		9459B861185BC54F0064CE56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = DevAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = DevLaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -5601,7 +5631,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Roblox Developer/RobloxDeveloper.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/iOS,
@@ -5622,7 +5651,6 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -5630,12 +5658,20 @@
 		9459B862185BC54F0064CE56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = DevAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = DevLaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				COPY_PHASE_STRIP = NO;
@@ -5678,7 +5714,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Roblox Developer/RobloxDeveloper.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/iOS,
@@ -5699,7 +5734,6 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -5707,9 +5741,17 @@
 		945A4D8C18AAD13F00272B49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = GridWarsAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = GridWarsLaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
@@ -5730,7 +5772,6 @@
 					STANDALONE_NOTIFICATION,
 					STANDALONE_GAMECENTER,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -5751,7 +5792,6 @@
 					../App.BulletPhysics,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/GridWars/GridWars.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/include,
@@ -5771,7 +5811,6 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -5779,9 +5818,17 @@
 		945A4D8D18AAD13F00272B49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = GridWarsAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = GridWarsLaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -5802,7 +5849,6 @@
 					STANDALONE_GAMECENTER,
 					STANDALONE_NOTIFICATION,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -5823,7 +5869,6 @@
 					../App.BulletPhysics,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/GridWars/GridWars.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/include,
@@ -5843,7 +5888,6 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -5851,12 +5895,19 @@
 		9FD83DF1193EB63400CAEC99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -5879,7 +5930,6 @@
 					RBX_PLATFORM_IOS,
 					NATIVE_IOS,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -5901,7 +5951,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "RobloxUI/Roblox-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"../fmod//iOS",
@@ -5920,7 +5969,6 @@
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -5928,12 +5976,19 @@
 		9FD83DF2193EB63400CAEC99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				COPY_PHASE_STRIP = NO;
@@ -5956,7 +6011,6 @@
 					RBX_PLATFORM_IOS,
 					NATIVE_IOS,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -5978,7 +6032,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "RobloxUI/Roblox-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"../fmod//iOS",
@@ -5997,7 +6050,6 @@
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -6005,11 +6057,19 @@
 		A71D64981A5B72F800B30233 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -6017,7 +6077,6 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -6027,7 +6086,6 @@
 					../App.BulletPhysics,
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -6035,19 +6093,25 @@
 				SEPARATE_STRIP = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = armv7;
 			};
 			name = Distribution;
 		};
 		A71D64991A5B72F800B30233 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				COPY_PHASE_STRIP = NO;
@@ -6070,7 +6134,6 @@
 					RBX_PLATFORM_IOS,
 					NATIVE_IOS,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -6092,7 +6155,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "RobloxUI/Roblox-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"../fmod//iOS",
@@ -6111,7 +6173,6 @@
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -6119,9 +6180,17 @@
 		A71D649C1A5B72F800B30233 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = GridWarsAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = GridWarsLaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -6142,7 +6211,6 @@
 					STANDALONE_GAMECENTER,
 					STANDALONE_NOTIFICATION,
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					../Log/include,
 					../App/include,
@@ -6163,7 +6231,6 @@
 					../App.BulletPhysics,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/GridWars/GridWars.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/include,
@@ -6183,7 +6250,6 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -6191,12 +6257,20 @@
 		A71D649D1A5B72F800B30233 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = DevAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = DevLaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				COPY_PHASE_STRIP = NO;
@@ -6239,7 +6313,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Roblox Developer/RobloxDeveloper.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					../fmod/iOS,
@@ -6260,7 +6333,6 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../RobloxMac ../Log/include ../App/include ../Base/include $(CONTRIB_PATH)/boost_1_55_0/include ./lua-5.1.4/src ../Rendering/AppDraw/include ../Rendering/g3d/include ../Rendering/g3d/zlib ../Rendering/GfxBase/include ../Rendering/RbxG3D/include ../Network/include ../google-breakpad/18MAR2011/src/client/mac/Framework ..";
-				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -6268,7 +6340,15 @@
 		F55D2A3A1BE02A1300C0913B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
@@ -6326,7 +6406,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = ROBLOXTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6334,7 +6413,6 @@
 					"$(PROJECT_DIR)/RobloxUI/Source/Components/Flurry",
 					"\"$(CONTRIB_PATH)/iOS/GoogleAnalyticsSDK/GoogleAnalyticsServicesiOS_3.08/\"",
 				);
-				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -6346,14 +6424,21 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roblox.app/Roblox";
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
 		F55D2A3B1BE02A1300C0913B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
@@ -6406,7 +6491,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = ROBLOXTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6414,7 +6498,6 @@
 					"$(PROJECT_DIR)/RobloxUI/Source/Components/Flurry",
 					"\"$(CONTRIB_PATH)/iOS/GoogleAnalyticsSDK/GoogleAnalyticsServicesiOS_3.08/\"",
 				);
-				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -6426,14 +6509,21 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roblox.app/Roblox";
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
 		F55D2A3C1BE02A1300C0913B /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
+				VALID_ARCHS = armv7;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				AD_HOC_CODE_SIGNING_ALLOWED = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
@@ -6485,7 +6575,6 @@
 					"$(CONTRIB_PATH)/SDL2/include",
 				);
 				INFOPLIST_FILE = ROBLOXTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6493,7 +6582,6 @@
 					"$(PROJECT_DIR)/RobloxUI/Source/Components/Flurry",
 					"\"$(CONTRIB_PATH)/iOS/GoogleAnalyticsSDK/GoogleAnalyticsServicesiOS_3.08/\"",
 				);
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-fobjc-arc",
@@ -6504,7 +6592,6 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roblox.app/Roblox";
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Distribution;
 		};

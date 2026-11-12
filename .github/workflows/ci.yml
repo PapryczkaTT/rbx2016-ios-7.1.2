@@ -1,14 +1,21 @@
-name: ci 
+name: ci
 on:
   push:
     branches:
-      - master 
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
       - main
 permissions:
-  contents: write
+  contents: read
 jobs:
   deploy:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
@@ -22,8 +29,83 @@ jobs:
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
-          path: ~/.cache 
+          path: ~/.cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
+
+  build-ios7:
+    runs-on: macos-13
+    env:
+      CONTRIB_PATH: ${{ github.workspace }}/Contribs
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Cache iPhoneOS 7.1 SDK
+        id: ios-sdk-cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/iPhoneOS7.1.sdk
+          key: iphoneos-7.1-sdk-329870876ab9e956e24de47e92cc3ec75c1cf55a
+
+      - name: Download iPhoneOS 7.1 SDK
+        if: steps.ios-sdk-cache.outputs.cache-hit != 'true'
+        run: |
+          git clone --depth 1 https://github.com/guoch/iPhoneOS7.1.sdk.git "$RUNNER_TEMP/iPhoneOS7.1.sdk"
+          test "$(git -C "$RUNNER_TEMP/iPhoneOS7.1.sdk" rev-parse HEAD)" = "329870876ab9e956e24de47e92cc3ec75c1cf55a"
+          test -f "$RUNNER_TEMP/iPhoneOS7.1.sdk/SDKSettings.plist"
+
+      - name: Install iPhoneOS 7.1 SDK
+        run: |
+          SDK_DEST="$(xcode-select -p)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk"
+          sudo mkdir -p "$SDK_DEST"
+          sudo rsync -a --exclude=.git "$RUNNER_TEMP/iPhoneOS7.1.sdk/" "$SDK_DEST/"
+          xcodebuild -showsdks
+
+      - name: Check iOS vendor dependencies
+        run: |
+          if [ ! -d "$CONTRIB_PATH/iOS" ]; then
+            echo "::error::Missing $CONTRIB_PATH/iOS. Supply the iOS vendor dependencies required by the Xcode project."
+            exit 1
+          fi
+
+      - name: Build ARMv7 app
+        run: |
+          xcodebuild \
+            -project iOS/RobloxMobile.xcodeproj \
+            -target Roblox \
+            -sdk "$(xcode-select -p)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk" \
+            -configuration Release \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            ARCHS=armv7 \
+            VALID_ARCHS=armv7 \
+            IPHONEOS_DEPLOYMENT_TARGET=7.1 \
+            CONTRIB_PATH="$CONTRIB_PATH" \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            AD_HOC_CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH="$RUNNER_TEMP/DerivedData/Build/Products/Release-iphoneos/Roblox.app"
+          if [ ! -d "$APP_PATH" ]; then
+            echo "::error::Expected app bundle was not produced at $APP_PATH"
+            exit 1
+          fi
+
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          ditto "$APP_PATH" "$RUNNER_TEMP/ipa/Payload/Roblox.app"
+          (cd "$RUNNER_TEMP/ipa" && zip -qry "$GITHUB_WORKSPACE/Roblox2016-iOS7-unsigned.ipa" Payload)
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Roblox2016-iOS7-unsigned
+          path: Roblox2016-iOS7-unsigned.ipa
+          if-no-files-found: error
